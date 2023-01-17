@@ -1,7 +1,7 @@
 function download() {
 	rm -rf Download
 	mkdir Download && cd Download
-	wget $1
+	wget $1 | rev | cut -c4- | rev
 	cd -
 }
 
