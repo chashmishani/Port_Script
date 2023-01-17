@@ -72,7 +72,7 @@ function main() {
 	rm -rf Download
 	git clone --depth=1 https://github.com/chashmishani/10or_Files.git -b template ROM
 	mv IMAGES/* ROM/
-	cd ROM && zip $ZIP_NAME *
+	cd ROM && zip -r $ZIP_NAME *
 	curl -sL https://git.io/file-transfer | sh && ./transfer wet $ZIP_NAME.zip >> ~/upload.txt
 }
 main
